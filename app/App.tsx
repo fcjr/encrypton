@@ -23,7 +23,7 @@ class App extends React.Component<AppProps> {
 	render(): JSX.Element {
 		return (
 			<div className="parent">
-				Encryptron
+				Encrypton
 			</div>
 		);
 	}
