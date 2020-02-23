@@ -1,99 +1,99 @@
 {
-  "name": "encrypton",
-  "productName": "encrypton",
-  "version": "0.0.1",
-  "description": "Elegant drag-and-drop encryption",
-  "main": ".webpack/main",
-  "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts,.tsx ."
-  },
-  "keywords": [],
-  "author": {
-    "name": "Frank Chiarulli Jr.",
-    "email": "support@encrypton.io"
-  },
-  "license": "GPL-3.0",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "encrypton"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ],
-      "plugins": [
-        [
-          "@electron-forge/plugin-webpack",
-          {
-            "mainConfig": "./webpack.main.config.js",
-            "renderer": {
-              "config": "./webpack.renderer.config.js",
-              "entryPoints": [
-                {
-                  "html": "./app/index.html",
-                  "js": "./app/index.tsx",
-                  "name": "main_window"
-                }
-              ]
-            }
-          }
-        ]
-      ]
-    }
-  },
-  "devDependencies": {
-    "@electron-forge/cli": "6.0.0-beta.49",
-    "@electron-forge/maker-deb": "6.0.0-beta.49",
-    "@electron-forge/maker-rpm": "6.0.0-beta.49",
-    "@electron-forge/maker-squirrel": "6.0.0-beta.49",
-    "@electron-forge/maker-zip": "6.0.0-beta.49",
-    "@electron-forge/plugin-webpack": "6.0.0-beta.49",
-    "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
-    "@typescript-eslint/eslint-plugin": "^2.18.0",
-    "@typescript-eslint/parser": "^2.18.0",
-    "css-loader": "^3.0.0",
-    "electron": "8.0.1",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-react": "^7.18.3",
-    "fork-ts-checker-webpack-plugin": "^3.1.1",
-    "node-loader": "^0.6.0",
-    "style-loader": "^0.23.1",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.0"
-  },
-  "dependencies": {
-    "@types/react": "^16.9.22",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-redux": "^7.1.7",
-    "@types/redux": "^3.6.0",
-    "electron-squirrel-startup": "^1.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-redux": "^7.2.0",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
-  }
+	"name": "encrypton",
+	"productName": "encrypton",
+	"version": "0.0.1",
+	"description": "Elegant drag-and-drop encryption",
+	"main": ".webpack/main",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"publish": "electron-forge publish",
+		"lint": "eslint --ext .ts,.tsx ."
+	},
+	"keywords": [],
+	"author": {
+		"name": "Frank Chiarulli Jr.",
+		"email": "support@encrypton.io"
+	},
+	"license": "GPL-3.0",
+	"config": {
+		"forge": {
+			"packagerConfig": {},
+			"makers": [
+				{
+					"name": "@electron-forge/maker-squirrel",
+					"config": {
+						"name": "encrypton"
+					}
+				},
+				{
+					"name": "@electron-forge/maker-zip",
+					"platforms": [
+						"darwin"
+					]
+				},
+				{
+					"name": "@electron-forge/maker-deb",
+					"config": {}
+				},
+				{
+					"name": "@electron-forge/maker-rpm",
+					"config": {}
+				}
+			],
+			"plugins": [
+				[
+					"@electron-forge/plugin-webpack",
+					{
+						"mainConfig": "./webpack.main.config.js",
+						"renderer": {
+							"config": "./webpack.renderer.config.js",
+							"entryPoints": [
+								{
+									"html": "./app/index.html",
+									"js": "./app/index.tsx",
+									"name": "main_window"
+								}
+							]
+						}
+					}
+				]
+			]
+		}
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "6.0.0-beta.49",
+		"@electron-forge/maker-deb": "6.0.0-beta.49",
+		"@electron-forge/maker-rpm": "6.0.0-beta.49",
+		"@electron-forge/maker-squirrel": "6.0.0-beta.49",
+		"@electron-forge/maker-zip": "6.0.0-beta.49",
+		"@electron-forge/plugin-webpack": "6.0.0-beta.49",
+		"@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@typescript-eslint/parser": "^2.18.0",
+		"css-loader": "^3.0.0",
+		"electron": "8.0.1",
+		"eslint": "^6.8.0",
+		"eslint-plugin-import": "^2.20.0",
+		"eslint-plugin-react": "^7.18.3",
+		"fork-ts-checker-webpack-plugin": "^3.1.1",
+		"node-loader": "^0.6.0",
+		"style-loader": "^0.23.1",
+		"ts-loader": "^6.2.1",
+		"typescript": "^3.7.0"
+	},
+	"dependencies": {
+		"@types/react": "^16.9.22",
+		"@types/react-dom": "^16.9.5",
+		"@types/react-redux": "^7.1.7",
+		"@types/redux": "^3.6.0",
+		"electron-squirrel-startup": "^1.0.0",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-redux": "^7.2.0",
+		"redux": "^4.0.5",
+		"redux-devtools-extension": "^2.13.8",
+		"redux-thunk": "^2.3.0"
+	}
 }

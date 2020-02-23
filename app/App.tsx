@@ -8,33 +8,33 @@ import { SettingsState } from "./store/settings/types";
 import { updateSettings } from "./store/settings/actions";
 
 interface AppProps {
-  updateSettings: typeof updateSettings;
-  settings: SettingsState;
+	updateSettings: typeof updateSettings;
+	settings: SettingsState;
 }
 
 class App extends React.Component<AppProps> {
-  state = {};
+	state = {};
 
-  componentDidMount(): void {
-    this.props.updateSettings({
-      loggedIn: true
-    });
-  }
+	componentDidMount(): void {
+		this.props.updateSettings({
+			trayMode: true
+		});
+	}
 
-  render(): JSX.Element {
-    return (
-      <div className="parent">
-        Encryptron
-      </div>
-    );
-  }
+	render(): JSX.Element {
+		return (
+			<div className="parent">
+				Encryptron
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = (state: AppState) => ({
-  settings: state.settings
+	settings: state.settings
 });
 
 export default connect(
-  mapStateToProps,
-  { updateSettings }
+	mapStateToProps,
+	{ updateSettings }
 )(App);

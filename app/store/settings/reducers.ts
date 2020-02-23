@@ -1,21 +1,21 @@
 import { UPDATE_SETTINGS, SettingsState, SettingsActionTypes } from "./types";
 
 const initialState: SettingsState = {
-  loggedIn: false,
+	trayMode: false,
 };
 
 export function settingsReducer(
-  state = initialState,
-  action: SettingsActionTypes
+	state = initialState,
+	action: SettingsActionTypes
 ): SettingsState {
-  switch (action.type) {
-    case UPDATE_SETTINGS: {
-      return {
-        ...state,
-        ...action.payload
-      };
-    }
-    default:
-      return state;
-  }
+	switch (action.type) {
+		case UPDATE_SETTINGS: {
+			return {
+				...state,
+				...action.payload
+			};
+		}
+		default:
+			return state;
+	}
 }

@@ -5,19 +5,19 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { settingsReducer } from "./settings/reducers";
 
 const rootReducer = combineReducers({
-  settings: settingsReducer,
+	settings: settingsReducer,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
 
 export default function configureStore() {
-  const middlewares = [thunkMiddleware];
-  const middleWareEnhancer = applyMiddleware(...middlewares);
+	const middlewares = [thunkMiddleware];
+	const middleWareEnhancer = applyMiddleware(...middlewares);
 
-  const store = createStore(
-    rootReducer,
-    composeWithDevTools(middleWareEnhancer)
-  );
+	const store = createStore(
+		rootReducer,
+		composeWithDevTools(middleWareEnhancer)
+	);
 
-  return store;
+	return store;
 }

@@ -8,10 +8,10 @@ import App from "./App";
 const store = configureStore();
 
 const Root = (): JSX.Element => (
-  <Provider store={store}>
-    <div className="drag-bar" />
-    <App />
-  </Provider>
+	<Provider store={store}>
+		<div className="drag-bar" />
+		<App />
+	</Provider>
 );
 
 render(<Root />, document.getElementById("root"));
