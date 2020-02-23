@@ -1,1 +1,10 @@
 theme: jekyll-theme-cayman
+
+title: [Encrypton]
+description: ["Simple, open-source, drag-and-drop encryption"]
+
+show_downloads: false
+
+# custom:
+#  mac_url: https://example.com/download
+#  windows_url: https://example.com/download
