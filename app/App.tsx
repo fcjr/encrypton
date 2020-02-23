@@ -1,11 +1,10 @@
 import * as React from "react";
 import { connect } from "react-redux";
+
 import { AppState } from "./store";
-
-import "./index.css";
-
 import { SettingsState } from "./store/settings/types";
 import { updateSettings } from "./store/settings/actions";
+import "./index.scss";
 
 interface AppProps {
 	updateSettings: typeof updateSettings;
