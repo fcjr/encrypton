@@ -16,7 +16,9 @@ const createWindow = (): void => {
 		resizable: false,
 		titleBarStyle: 'hiddenInset',
 		vibrancy: 'sidebar',
-		transparent: true
+		transparent: true,
+		fullscreenable: false,
+		maximizable: false,
 	});
 
 	// and load the index.html of the app.

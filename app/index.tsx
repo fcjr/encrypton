@@ -9,7 +9,7 @@ const store = configureStore();
 
 const Root = (): JSX.Element => (
 	<Provider store={store}>
-		<div className="drag-bar" />
+		<div className="top-bar" />
 		<App />
 	</Provider>
 );
